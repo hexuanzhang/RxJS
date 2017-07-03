@@ -1,0 +1,26 @@
+li {
+	background: transparent;
+	color: #35C8E6;
+	text-decoration: none;
+	cursor: pointer;
+	padding: 0 10px;
+}
+
+.tab {
+	height: 52px;
+	background-color: #fff;
+	border-bottom: 1px solid #eee;
+	padding: 0;
+}
+
+.tab li {
+	display: inline-block;
+	margin: 0 25px;
+	line-height: 52px;
+	color: #2e2e2e;
+}
+
+.tab .active {
+	color: #35C8E6;
+	box-shadow: 0 -1px 0 #35C8E6 inset;
+}

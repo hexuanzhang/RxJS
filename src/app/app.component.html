@@ -1,0 +1,38 @@
+<ul class="tab">
+    <ng-template ngFor let-o [ngForOf]="nav.tab" let-i="index">
+        <li (click)="switchNav(i)" [ngClass]="{ active: i === nav.index }">{{ o.name }}</li>
+    </ng-template>
+</ul>
+
+<ul class="tab">
+    <ng-template ngFor let-tab [ngForOf]="tabs">
+        <li (click)="switchTab(tab.id)" [ngClass]="{ active: tab.id === activeIndex }">{{tab.name}}</li>
+    </ng-template>
+</ul>
+<ng-template>
+    
+</ng-template>
+<div [ngSwitch]="activeIndex">
+    <ng-template [ngSwitchCase]="0">
+        <ng-if></ng-if>
+    </ng-template>
+    <ng-template [ngSwitchCase]="1">
+        <ng-for></ng-for>
+    </ng-template>
+    <ng-template [ngSwitchCase]="2">
+        <ng-style></ng-style>
+    </ng-template>
+    <ng-template [ngSwitchCase]="3">
+       <ng-class></ng-class>
+    </ng-template>
+    <ng-template [ngSwitchCase]="100">
+        <pluck></pluck>
+    </ng-template>
+    <ng-template [ngSwitchCase]="101">
+        <dobounceTime></dobounceTime>
+    </ng-template>
+    <ng-template ngSwitchDefault>
+        <div>暂无数据</div>
+    </ng-template>
+</div>
+

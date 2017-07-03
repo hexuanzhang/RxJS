@@ -1,0 +1,28 @@
+<ul>
+	<li *ngFor="let contact of contacts | async; trackBy: trackById; let i = index; let c = count; let f = first; let l = last; let o = odd; let e = even;">
+		<p>Index: {{ i }}</p>
+		<p>Count: {{ c }}</p>
+		<p>Row: {{ f }} - {{ o }} - {{ e }} - {{ l }}</p>
+		<contact-card [contact]="contact"></contact-card>
+	</li>
+</ul>
+<br>
+<br>
+<ul>
+	<ng-template ngFor let-contact [ngForOf]="contacts | async">
+		<li>
+			<contact-card [contact]="contact"></contact-card>
+		</li>
+	</ng-template>
+</ul>
+<button (click)="refresh()">刷新</button>
+<br>
+<br>
+<form [formGroup]="form" (submit)="submit(form.value)">
+	<div *ngFor="let skill of skills.controls; let i = index">
+		<input type="checkbox" [formControl]="skill"/>{{user.skills[i].name}}
+	</div>
+	<button type="submit">Submit</button>
+</form>
+
+{{ form.value | json }}

@@ -1,0 +1,21 @@
+<div *ngIf="isActive; else elseContent">
+	<h3>ngIf</h3>
+</div>
+<ng-template #elseContent>
+	<h3>ngElse</h3>
+</ng-template>
+
+<div *ngIf="isActive as val; then trueContent else falseContent"></div>
+<ng-template #trueContent>
+	<h3>{{isActive}}</h3>
+</ng-template>
+<ng-template #falseContent>
+	<h3>{{isActive}}</h3>
+</ng-template>
+
+<div *ngIf="asyncObj | async; else loading; let obj">
+	{{ obj.num }}, {{ obj.bool }}
+</div>
+<ng-template #loading let-obj>
+	<h3>loading... obj is {{ obj | json}}</h3>
+</ng-template>
