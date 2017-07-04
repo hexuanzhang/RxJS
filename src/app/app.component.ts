@@ -2,6 +2,7 @@ import { Component, TemplateRef, ViewChild, AfterViewInit, OnInit } from '@angul
 import {ReactiveFormsModule, FormsModule, FormBuilder, FormArray} from '@angular/forms';
 import { Observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject } from 'rxjs';
 import { NG_TAB } from './directive/index';
+import { COMPONENT_TAB } from './component/index';
 import { RXJS_TAB } from './rxjs/index';
 
 @Component({
@@ -23,6 +24,10 @@ export class AppComponent implements OnInit {
             {
                 id: 1,
                 name: 'rxjs'
+            },
+            {
+                id: 2,
+                name: 'component'
             }
         ],
         index: 0
@@ -104,6 +109,9 @@ export class AppComponent implements OnInit {
         switch (index) {
             case 1:
                 currentTab = RXJS_TAB;
+                break;
+            case 2:
+                currentTab = COMPONENT_TAB;
                 break;
             default:
                 currentTab = NG_TAB;
