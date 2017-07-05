@@ -3,7 +3,7 @@ import { Observable } from 'rxjs';
 
 @Component ({
 	selector: 'pluck',
-	template: '<h3 id="h3" class="pluck h3">while</h3>'
+	template: '<h3 id="h3" class="pluck h3">pluck</h3>'
 })
 export class PluckComponent implements OnInit {
 	constructor () {}
