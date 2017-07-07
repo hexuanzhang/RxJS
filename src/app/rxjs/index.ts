@@ -5,6 +5,7 @@ import { DistinctComponent } from './distinct';
 import { DistinctUntilChangedComponent } from './distinctUntilChanged';
 import { DistinctUntilKeyChangedComponent } from './distinctUntilKeyChanged';
 import { PartitionComponent } from './partition';
+import { DeferComponent } from './defer';
 
 export const RXJS_COMPONENT = [
 	DobounceTimeComponent,
@@ -13,7 +14,8 @@ export const RXJS_COMPONENT = [
 	DistinctComponent,
 	DistinctUntilChangedComponent,
 	DistinctUntilKeyChangedComponent,
-	PartitionComponent
+	PartitionComponent,
+	DeferComponent
 ];
 
 export const RXJS_TAB = [
@@ -44,5 +46,9 @@ export const RXJS_TAB = [
 	{
 		id: 106,
 		name: 'partition'
+	},
+	{
+		id: 107,
+		name: 'defer'
 	}
 ];
