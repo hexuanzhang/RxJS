@@ -7,6 +7,7 @@ import { DistinctUntilKeyChangedComponent } from './distinctUntilKeyChanged';
 import { PartitionComponent } from './partition';
 import { DeferComponent } from './defer';
 import { EmptyComponent } from './empty';
+import { FromPromiseComponent } from './fromPromise';
 
 export const RXJS_COMPONENT = [
 	DobounceTimeComponent,
@@ -17,7 +18,8 @@ export const RXJS_COMPONENT = [
 	DistinctUntilKeyChangedComponent,
 	PartitionComponent,
 	DeferComponent,
-	EmptyComponent
+	EmptyComponent,
+	FromPromiseComponent
 ];
 
 export const RXJS_TAB = [
@@ -56,5 +58,9 @@ export const RXJS_TAB = [
 	{
 		id: 108,
 		name: 'empty'
+	},
+	{
+		id: 109,
+		name: 'fromPromise'
 	}
 ];
