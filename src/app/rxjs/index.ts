@@ -8,6 +8,8 @@ import { PartitionComponent } from './partition';
 import { DeferComponent } from './defer';
 import { EmptyComponent } from './empty';
 import { FromPromiseComponent } from './fromPromise';
+import { RangeComponent } from './range';
+import { ThrowComponent } from './throw';
 
 export const RXJS_COMPONENT = [
 	DobounceTimeComponent,
@@ -19,7 +21,9 @@ export const RXJS_COMPONENT = [
 	PartitionComponent,
 	DeferComponent,
 	EmptyComponent,
-	FromPromiseComponent
+	FromPromiseComponent,
+	RangeComponent,
+	ThrowComponent
 ];
 
 export const RXJS_TAB = [
@@ -62,5 +66,13 @@ export const RXJS_TAB = [
 	{
 		id: 109,
 		name: 'fromPromise'
+	},
+	{
+		id: 110,
+		name: 'range'
+	},
+	{
+		id: 111,
+		name: 'throw'
 	}
 ];
