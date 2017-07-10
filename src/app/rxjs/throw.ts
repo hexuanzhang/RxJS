@@ -22,9 +22,6 @@ export class ThrowComponent implements OnInit {
 				},
 				error: (err) => {
 					console.error(err);
-				},
-				complete: () => {
-					console.info('complete');
 				}
 			});
 		
