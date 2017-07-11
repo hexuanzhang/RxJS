@@ -5,7 +5,7 @@
 	<h3>ngElse</h3>
 </ng-template>
 
-<div *ngIf="isActive as val; then trueContent else falseContent"></div>
+<div *ngIf="isActive; then trueContent else falseContent"></div>
 <ng-template #trueContent>
 	<h3>{{isActive}}</h3>
 </ng-template>
