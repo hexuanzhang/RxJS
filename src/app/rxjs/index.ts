@@ -10,6 +10,7 @@ import { EmptyComponent } from './empty';
 import { FromPromiseComponent } from './fromPromise';
 import { RangeComponent } from './range';
 import { ThrowComponent } from './throw';
+import { AsapComponent } from './scheduler/asap';
 
 export const RXJS_COMPONENT = [
 	DobounceTimeComponent,
@@ -23,7 +24,8 @@ export const RXJS_COMPONENT = [
 	EmptyComponent,
 	FromPromiseComponent,
 	RangeComponent,
-	ThrowComponent
+	ThrowComponent,
+	AsapComponent
 ];
 
 export const RXJS_TAB = [
@@ -74,5 +76,9 @@ export const RXJS_TAB = [
 	{
 		id: 111,
 		name: 'throw'
+	},
+	{
+		id: 112,
+		name: 'asap'
 	}
 ];
