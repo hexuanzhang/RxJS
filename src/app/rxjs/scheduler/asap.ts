@@ -22,6 +22,13 @@ export class AsapComponent implements OnInit, OnDestroy {
 		Scheduler.asap.schedule(() => {
 			console.info('second--asap');
 		});
+		
+		Scheduler.queue.schedule(function(state) {
+			if (state > 0) {
+				console.info(state);
+				this.schedule(state-1);
+			}
+		}, 0, 3);
 	}
 	
 	ngOnDestroy() {
