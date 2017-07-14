@@ -11,6 +11,8 @@ import { FromPromiseComponent } from './fromPromise';
 import { RangeComponent } from './range';
 import { ThrowComponent } from './throw';
 import { AsapComponent } from './scheduler/asap';
+import { FromComponent } from './from';
+import { FromEventComponent } from './fromEvent';
 
 export const RXJS_COMPONENT = [
 	DobounceTimeComponent,
@@ -25,7 +27,9 @@ export const RXJS_COMPONENT = [
 	FromPromiseComponent,
 	RangeComponent,
 	ThrowComponent,
-	AsapComponent
+	AsapComponent,
+	FromComponent,
+	FromEventComponent
 ];
 
 export const RXJS_TAB = [
@@ -80,5 +84,13 @@ export const RXJS_TAB = [
 	{
 		id: 112,
 		name: 'asap'
+	},
+	{
+		id: 113,
+		name: 'from'
+	},
+	{
+		id: 114,
+		name: 'fromEvent'
 	}
 ];
