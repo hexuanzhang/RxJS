@@ -14,7 +14,7 @@ export class FromPromiseComponent implements OnInit {
 	 */
 	ngOnInit () {
 		let _promise = new Promise((resolve, reject) => {
-			resolve(1);
+			// resolve(1);
 			// reject(new Error('exception'));
 		});
 		
