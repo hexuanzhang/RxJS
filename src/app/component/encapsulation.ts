@@ -1,6 +1,6 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 
-@Component ({
+@Component({
 	selector: 'encapsulation',
 	encapsulation: ViewEncapsulation.Native,
 	template: `<h3>viewEncapsulation</h3>`,
@@ -12,7 +12,8 @@ import { Component, ViewEncapsulation } from '@angular/core';
 	`]
 })
 export class EncapsulationComponent {
-	constructor () {}
+	constructor() {
+	}
 	
 	/**
 	 * 枚举类 ViewEncapsulation 包括三个成员：Native、Emulated、None
