@@ -5,9 +5,9 @@ import { SelectorClassComponent } from './class.component';
 import { SelectorNotComponent } from './not.component';
 
 export const Selector = [
-	SelectorComponent,
-	SelectorTagComponent,
-	SelectorAttrComponent,
-	SelectorClassComponent,
-	SelectorNotComponent
+    SelectorComponent,
+    SelectorTagComponent,
+    SelectorAttrComponent,
+    SelectorClassComponent,
+    SelectorNotComponent
 ];

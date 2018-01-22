@@ -1,8 +1,8 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-	selector: 'contact-card',
-	template: `
+    selector: 'contact-card',
+    template: `
 		    <div class="contact-card">
 		      <p>{{ contact.name }} ( {{ contact.age }} )</p>
 		      <p>{{ contact.email }}</p>
@@ -10,9 +10,9 @@ import { Component, Input } from '@angular/core';
 		  `
 })
 export class ContactCardComponent {
-	@Input() contact: any;
-	
-	constructor() {
-		
-	}
+    @Input() contact: any;
+
+    constructor() {
+
+    }
 }

@@ -1,6 +1,6 @@
 import { Component, TemplateRef, ViewChild, AfterViewInit, OnInit } from '@angular/core';
-import {ReactiveFormsModule, FormsModule, FormBuilder, FormArray} from '@angular/forms';
-import { Observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject } from 'rxjs';
+import { ReactiveFormsModule, FormsModule, FormBuilder, FormArray } from '@angular/forms';
+import { Observable, Subject, BehaviorSubject, ReplaySubject, AsyncSubject } from 'Rxjs';
 import { NG_TAB } from './directive/index';
 import { COMPONENT_TAB } from './component/index';
 import { RXJS_TAB } from './rxjs/index';
@@ -12,9 +12,9 @@ import { RXJS_TAB } from './rxjs/index';
 })
 export class AppComponent implements OnInit {
     title = 'loading';
-    
+
     @ViewChild('tpl') tpl: TemplateRef<any>;
-    
+
     nav: any = {
         tab: [
             {
@@ -32,23 +32,23 @@ export class AppComponent implements OnInit {
         ],
         index: 0
     };
-    
+
     activeIndex: number = 0;
     tabs: Array<any>;
-    
-    constructor () {
-        let observable = Observable.interval(1000).take(10),
+
+    constructor() {
+        const observable = Observable.interval(1000).take(10),
             behaviorSubject = new BehaviorSubject(0),
             multicasted = observable.multicast(new ReplaySubject(3)).refCount();
-        
-        let observerA = {
-                next: x => {
-                    console.warn('A Next:' + x);
-                },
-                complete: () => {
-                    console.error('A Complete');
-                }
+
+        const observerA = {
+            next: x => {
+                console.warn('A Next:' + x);
             },
+            complete: () => {
+                console.error('A Complete');
+            }
+        },
             observerB = {
                 next: x => {
                     console.warn('B Next:' + x);
@@ -73,38 +73,38 @@ export class AppComponent implements OnInit {
                     console.error('Second Complete');
                 }
             };
-        
+
         // multicasted.subscribe(observerF);
         // observable.subscribe(observerA);
-        
-        
+
+
         setTimeout(() => {
             // multicasted.subscribe(observerS);
             // observable.subscribe(observerB);
         }, 3000);
-        
-        console.info('raw', String.raw`${'test'}`);
+
+        console.log('raw', String.raw`${'test'}`);
     }
-    
-    ngOnInit () {
+
+    ngOnInit() {
         this.switchNav();
     }
-    
+
     /**
      * 切换二级 tab
      *
      * @param index
      */
-    switchTab (index:number) {
+    switchTab(index: number) {
         this.activeIndex = index;
     }
-    
+
     /**
      * 切换导航
      *
      * @param index
      */
-    switchNav (index: number = 0) {
+    switchNav(index: number = 0) {
         let currentTab;
         switch (index) {
             case 1:
@@ -116,7 +116,7 @@ export class AppComponent implements OnInit {
             default:
                 currentTab = NG_TAB;
         }
-        
+
         this.activeIndex = currentTab[0].id;
         this.nav.index = index;
         this.tabs = currentTab;

@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
-@Component ({
-	selector: 'ng-class',
-	templateUrl: './ng-class.html',
-	styles: [`
+@Component({
+    selector: 'ng-class',
+    templateUrl: './ng-class.html',
+    styles: [`
 		.blue {
 			color: blue;
 		}
@@ -16,11 +16,11 @@ import { Component, OnInit } from '@angular/core';
 	`]
 })
 export class NgClassComponent implements OnInit {
-	constructor () {}
-	
-	isActive: boolean;
-	
-	ngOnInit() {
-		this.isActive = true;
-	}
+    isActive: boolean;
+
+    constructor() { }
+
+    ngOnInit() {
+        this.isActive = true;
+    }
 }

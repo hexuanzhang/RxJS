@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 
 @Component({
-	selector: 'selector',
-	template: `
+    selector: 'selector',
+    template: `
 		<h3>Angular 2 Component selectors</h3>
 		<hr>
 		Element: <selector-tag></selector-tag>
@@ -15,6 +15,6 @@ import { Component } from '@angular/core';
 	`
 })
 export class SelectorComponent {
-	constructor() {
-	}
+    constructor() {
+    }
 }

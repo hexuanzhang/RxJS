@@ -1,92 +1,91 @@
 <ul class="tab">
-    <ng-template ngFor let-o [ngForOf]="nav.tab" let-i="index">
-        <li (click)="switchNav(i)" [ngClass]="{ active: i === nav.index }">{{ o.name }}</li>
-    </ng-template>
+	<ng-template ngFor let-o [ngForOf]="nav.tab" let-i="index">
+		<li (click)="switchNav(i)" [ngClass]="{ active: i === nav.index }">{{ o.name }}</li>
+	</ng-template>
 </ul>
 
 <ul class="tab">
-    <ng-template ngFor let-tab [ngForOf]="tabs">
-        <li (click)="switchTab(tab.id)" [ngClass]="{ active: tab.id === activeIndex }">{{tab.name}}</li>
-    </ng-template>
+	<ng-template ngFor let-tab [ngForOf]="tabs">
+		<li (click)="switchTab(tab.id)" [ngClass]="{ active: tab.id === activeIndex }">{{tab.name}}</li>
+	</ng-template>
 </ul>
 <ng-template>
-    
+
 </ng-template>
 <div [ngSwitch]="activeIndex">
-    <ng-template [ngSwitchCase]="1">
-        <ng-if></ng-if>
-    </ng-template>
-    <ng-template [ngSwitchCase]="2">
-        <ng-for></ng-for>
-    </ng-template>
-    <ng-template [ngSwitchCase]="3">
-        <ng-style></ng-style>
-    </ng-template>
-    <ng-template [ngSwitchCase]="4">
-       <ng-class></ng-class>
-    </ng-template>
-    <ng-template [ngSwitchCase]="5">
-        <ngNonBindable></ngNonBindable>
-    </ng-template>
-    <ng-template [ngSwitchCase]="100">
-        <pluck></pluck>
-    </ng-template>
-    <ng-template [ngSwitchCase]="101">
-        <dobounceTime></dobounceTime>
-    </ng-template>
-    <ng-template [ngSwitchCase]="102">
-        <switch></switch>
-    </ng-template>
-    <ng-template [ngSwitchCase]="103">
-        <distinct></distinct>
-    </ng-template>
-    <ng-template [ngSwitchCase]="104">
-        <distinctUntilChanged></distinctUntilChanged>
-    </ng-template>
-    <ng-template [ngSwitchCase]="105">
-        <distinctUntilKeyChanged></distinctUntilKeyChanged>
-    </ng-template>
-    <ng-template [ngSwitchCase]="106">
-        <partition></partition>
-    </ng-template>
-    <ng-template [ngSwitchCase]="107">
-        <defer></defer>
-    </ng-template>
-    <ng-template [ngSwitchCase]="108">
-        <empty></empty>
-    </ng-template>
-    <ng-template [ngSwitchCase]="109">
-        <fromPromise></fromPromise>
-    </ng-template>
-    <ng-template [ngSwitchCase]="110">
-        <range></range>
-    </ng-template>
-    <ng-template [ngSwitchCase]="111">
-        <throw></throw>
-    </ng-template>
-    <ng-template [ngSwitchCase]="112">
-        <asap></asap>
-    </ng-template>
-    <ng-template [ngSwitchCase]="113">
-        <from></from>
-    </ng-template>
-    <ng-template [ngSwitchCase]="114">
-        <fromEvent></fromEvent>
-    </ng-template>
-    <ng-template [ngSwitchCase]="115">
-        <catch></catch>
-    </ng-template>
-    <ng-template [ngSwitchCase]="200">
-        <animations></animations>
-    </ng-template>
-    <ng-template [ngSwitchCase]="201">
-        <encapsulation></encapsulation>
-    </ng-template>
-    <ng-template [ngSwitchCase]="202">
-        <selector></selector>
-    </ng-template>
-    <ng-template ngSwitchDefault>
-        <div>暂无数据</div>
-    </ng-template>
+	<ng-template [ngSwitchCase]="1">
+		<ng-if></ng-if>
+	</ng-template>
+	<ng-template [ngSwitchCase]="2">
+		<ng-for></ng-for>
+	</ng-template>
+	<ng-template [ngSwitchCase]="3">
+		<ng-style></ng-style>
+	</ng-template>
+	<ng-template [ngSwitchCase]="4">
+		<ng-class></ng-class>
+	</ng-template>
+	<ng-template [ngSwitchCase]="5">
+		<ngNonBindable></ngNonBindable>
+	</ng-template>
+	<ng-template [ngSwitchCase]="100">
+		<pluck></pluck>
+	</ng-template>
+	<ng-template [ngSwitchCase]="101">
+		<dobounceTime></dobounceTime>
+	</ng-template>
+	<ng-template [ngSwitchCase]="102">
+		<switch></switch>
+	</ng-template>
+	<ng-template [ngSwitchCase]="103">
+		<distinct></distinct>
+	</ng-template>
+	<ng-template [ngSwitchCase]="104">
+		<distinctUntilChanged></distinctUntilChanged>
+	</ng-template>
+	<ng-template [ngSwitchCase]="105">
+		<distinctUntilKeyChanged></distinctUntilKeyChanged>
+	</ng-template>
+	<ng-template [ngSwitchCase]="106">
+		<partition></partition>
+	</ng-template>
+	<ng-template [ngSwitchCase]="107">
+		<defer></defer>
+	</ng-template>
+	<ng-template [ngSwitchCase]="108">
+		<empty></empty>
+	</ng-template>
+	<ng-template [ngSwitchCase]="109">
+		<fromPromise></fromPromise>
+	</ng-template>
+	<ng-template [ngSwitchCase]="110">
+		<range></range>
+	</ng-template>
+	<ng-template [ngSwitchCase]="111">
+		<throw></throw>
+	</ng-template>
+	<ng-template [ngSwitchCase]="112">
+		<asap></asap>
+	</ng-template>
+	<ng-template [ngSwitchCase]="113">
+		<from></from>
+	</ng-template>
+	<ng-template [ngSwitchCase]="114">
+		<fromEvent></fromEvent>
+	</ng-template>
+	<ng-template [ngSwitchCase]="115">
+		<catch></catch>
+	</ng-template>
+	<ng-template [ngSwitchCase]="200">
+		<animations></animations>
+	</ng-template>
+	<ng-template [ngSwitchCase]="201">
+		<encapsulation></encapsulation>
+	</ng-template>
+	<ng-template [ngSwitchCase]="202">
+		<selector></selector>
+	</ng-template>
+	<ng-template ngSwitchDefault>
+		<div>暂无数据</div>
+	</ng-template>
 </div>
-

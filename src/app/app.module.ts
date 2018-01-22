@@ -12,22 +12,22 @@ import { RXJS_COMPONENT } from './rxjs/index';
 import { COMPONENT } from './component/index';
 
 @NgModule({
-  declarations: [
-      AppComponent,
-      ContactCardComponent,
-      ...NG_COMPONENT,
-      ...RXJS_COMPONENT,
-      ...COMPONENT
-  ],
-  imports: [
-      BrowserAnimationsModule,
-      BrowserModule,
-      FormsModule,
-      HttpModule,
-      ReactiveFormsModule,
-      CommonModule
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        ContactCardComponent,
+        ...NG_COMPONENT,
+        ...RXJS_COMPONENT,
+        ...COMPONENT
+    ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        FormsModule,
+        HttpModule,
+        ReactiveFormsModule,
+        CommonModule
+    ],
+    providers: [],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }
